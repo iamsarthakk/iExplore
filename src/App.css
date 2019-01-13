@@ -1,4 +1,57 @@
+.Filter{
+  position:absolute;
+  top:24%;
+  left:45%;
+  background: #2f3640;
+  height:40px;
+  border-radius: 40px;
+  padding: 10px;
+}
 
+.Filter a{
+  color:#e84118;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Filter input{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0px;
+  color: white;
+  font-size: 16px;
+  line-height: 40px;
+  transition: 0.4s;
+  width:240px;
+}
+
+.Option{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  position: relative;
+  left: 500px;
+}
+
+.Option li{
+  float: left;
+  width: 200px;
+  height: 40px;
+  background-color: red;
+  opacity: .8;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  margin: 5px;
+}
 ul li a:hover{
   background-color: purple;
 }
@@ -40,28 +93,4 @@ ul li{
 .App-logo {
   height: 20vmin;
   float: left;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
