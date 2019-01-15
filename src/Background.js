@@ -14,7 +14,7 @@ class Background extends Component{
 
       p.setup = function() {
         canvas = p.createCanvas(p.windowWidth, p.windowHeight,p.WEBGL);
-        canvas.position(0,0);
+        canvas.position(0,100);
         canvas.style('z-index',-1);
         ma = p.atan(p.cos(p.QUARTER_PI))
         maxD = p.dist(0, 0, 200, 200);
@@ -22,7 +22,7 @@ class Background extends Component{
 
       p.draw = function() {
 
-        p.background(100);
+        p.background(0);
         p.ortho(-1000, 1000, 1000, -1000, 0, 1000);
 
         p.rotateX(ma);

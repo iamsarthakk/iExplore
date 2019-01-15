@@ -1,9 +1,130 @@
+@import '<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">';
+
+#option{
+  background-image: url('./real-estate.jpg');
+  background-size: cover;
+}
+
+.Option a{
+  text-decoration: none;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 60px 0;
+  border: 2px solid #ff7675;
+  padding: 14px 60px;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+
+.Option li:: before{
+  background: #ff7675;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.App section h2{
+
+}
+.Option li{
+  font-family: 'Alegreya' serif;
+  font-size: 200%;
+  display: block;
+  padding: 10px;
+
+}
+
+.Options{
+
+
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.Login{
+  float:right;
+  display: inline-block;
+  position: relative;
+  top: -33px;
+  left: 20%;
+  margin: 0 auto;
+}
+
+.Login h3{
+  float: right;
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+
+#menu-icon{
+  display: none;
+  width: 40px;
+  height: 40px;
+}
+
+a:hover #menu-icon{
+  border-radius: 4px 4px 0 0;
+}
+
+nav ul li{
+  font-family: 'Alegreya' serif;
+  font-size: 150%;
+  display: inline-block;
+  float: left;
+  padding: 10px;
+}
+
+nav ul li a{
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+nav ul li a:hover{
+  color: #C3D7DF;
+}
+ul{
+  list-style-type: none;
+}
+
+nav{
+  float: right;
+  padding: 2px 20px 0px 0px;
+}
+
+header  {
+   background-color: #333333;
+   width:100%;
+   height:90px;
+   float: left;
+}
+
+h1{
+  font-size: 250%;
+  margin:20px;
+  float: left;
+  width:250px;
+  height: 160px;
+}
+
+#header-inner{
+  max-width: 1200px;
+  margin:0 auto;
+}
+
 .Filter{
   position:absolute;
-  top:24%;
-  left:45%;
+  top:25%;
+  left:25%;
+  right:20%;
   background: #2f3640;
-  height:40px;
+  height:30px;
   border-radius: 40px;
   padding: 10px;
 }
@@ -11,8 +132,8 @@
 .Filter a{
   color:#e84118;
   float: right;
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 30px;
   border-radius: 50%;
   background-color: #2f3640;
   display: flex;
@@ -28,69 +149,61 @@
   padding: 0px;
   color: white;
   font-size: 16px;
-  line-height: 40px;
+  line-height: 30px;
   transition: 0.4s;
-  width:240px;
-}
-
-.Option{
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-  position: relative;
-  left: 500px;
-}
-
-.Option li{
-  float: left;
-  width: 200px;
-  height: 40px;
-  background-color: red;
-  opacity: .8;
-  line-height: 40px;
-  text-align: center;
-  font-size: 20px;
-  margin: 5px;
-}
-ul li a:hover{
-  background-color: purple;
-}
-
-ul li a{
-  text-decoration: none;
-  color: white;
-  display: block;
-}
-
-ul{
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-}
-
-ul li{
-  float: none;
-  width: 200px;
-  height: 40px;
-  background-color: black;
-  opacity: .8;
-  line-height: 40px;
-  text-align: center;
-  font-size: 20px;
-  margin: 5px;
+  width:80%;
 }
 
 
-.Login {
-  position: absolute;
-  top:30px;
-  left:1400px;
-}
-.App {
-  text-align: center;
+body{
+  background: #f5f5f5;
+  color: #67727A;
+  font-family:'Alegreya',serif;
+  margin:0;
 }
 
-.App-logo {
-  height: 20vmin;
-  float: left;
+*{
+  margin:0;
+  padding:0;
+  border: 0;
+}
+
+@media screen and (max-width:1060px) {
+  #menu-icon{
+    display: inline-block;
+  }
+
+  nav ul{
+    display: none;
+  }
+
+  nav:hover ul{
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    padding: 20px;
+    background: #6991AC;
+    right: 20px;
+    top: 60px;
+    border: 1px solid #fff;
+    border-radius: 2px 0 2px 2px;
+    width: 50%;
+  }
+
+  nav li{
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .Filter{
+    left: 0;
+    right: 0;
+  }
+
+  .Login{
+  top: -15px;
+  left: -20px;
+  right: 2000px;
+  }
 }
