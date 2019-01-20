@@ -1,33 +1,56 @@
 @import '<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">';
 
-#option{
-  background-image: url('./real-estate.jpg');
-  background-size: cover;
+.back1{
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -2;
 }
 
+#who{
+  position: absolute;
+  left: 40%;
+  top: 300px;
+  font-size: 70px;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+/* .Options{
+  background: #2d3436;
+} */
 .Option a{
-  text-decoration: none;
   color: white;
   text-decoration: none;
   font-size: 14px;
-  margin: 60px 0;
+  margin: 0 40px;
   border: 2px solid #ff7675;
   padding: 14px 60px;
   overflow: hidden;
   transition: 1s all ease;
+  position:relative;
+  top: 300px;
+  left: 255%;
+  font-family: "montserrat";
 }
 
-.Option li:: before{
+.Option a::before{
   background: #ff7675;
   content: "";
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+  width: 0%;
+  height: 100%;
 }
 
+.Option a:hover::before{
+   width: 100%;
+}
 .App section h2{
 
 }
@@ -35,13 +58,11 @@
   font-family: 'Alegreya' serif;
   font-size: 200%;
   display: block;
+  float: left;
   padding: 10px;
-
 }
 
 .Options{
-
-
   position: absolute;
   top: 50%;
   left:50%;
@@ -78,7 +99,7 @@ nav ul li{
   font-size: 150%;
   display: inline-block;
   float: left;
-  padding: 10px;
+  padding: 20px;
 }
 
 nav ul li a{
@@ -107,7 +128,8 @@ header  {
 
 h1{
   font-size: 250%;
-  margin:20px;
+  margin:30px;
+  margin-left: -20%;
   float: left;
   width:250px;
   height: 160px;
@@ -121,10 +143,10 @@ h1{
 .Filter{
   position:absolute;
   top:25%;
-  left:25%;
-  right:20%;
+  left:35%;
+  right:30%;
   background: #2f3640;
-  height:30px;
+  height:40px;
   border-radius: 40px;
   padding: 10px;
 }
@@ -133,7 +155,7 @@ h1{
   color:#e84118;
   float: right;
   width: 70px;
-  height: 30px;
+  height: 40px;
   border-radius: 50%;
   background-color: #2f3640;
   display: flex;
@@ -149,7 +171,7 @@ h1{
   padding: 0px;
   color: white;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 40px;
   transition: 0.4s;
   width:80%;
 }
