@@ -3,7 +3,7 @@ import p5 from 'p5';
 import "p5/lib/addons/p5.dom";
 import LoginR from './Router/LoginR.js'
 import Error from './Router/Error.js'
-import menu from './menu.png';
+import menu from './menu.svg';
 import './App.css';
 import login from './login.svg';
 import Chat from './Chat.js';
@@ -17,11 +17,10 @@ const Home =() => {
     <div className="App">
       <header>
         <div id="header-inner">
-          <h1><a href="#" style={{textDecoration:'none', color:'white'}}>iExplore </a></h1>
+          <h1><a href="#">iExplore </a></h1>
           <nav>
               <a href="#" id="menu-icon"><img src={menu}/></a>
               <Content/>
-              <Login/>
           </nav>
         </div>
       </header>
@@ -64,7 +63,11 @@ class Content extends Component {
     return (
       <div className="Content">
         <img/>
-        <ul>{this.state.tags.map(tag=><li><a key={tag} href="#">{tag}</a></li>)}</ul>
+        <ul>{this.state.tags.map(tag=><li><a key={tag} href="#">{tag}</a></li>)}
+          <li><img src={login} style={{height:20}} />
+              <NavLink to="/login">Login</NavLink>
+          </li>
+        </ul>
       </div>
     );
   }
@@ -78,20 +81,6 @@ class Filter extends Component {
         <img/>
         <input type="text" placeholder="Enter city" />
         <a><i class="fas fa-search"></i></a>
-      </div>
-    );
-  }
-}
-
-class Login extends Component {
-
-  render() {
-    return (
-      <div className="Login" style={{fontSize:'100%'}}>
-        <img src={login} style={{height:20}} />
-        <h3>
-        <NavLink to="/login">Login</NavLink>
-        </h3>
       </div>
     );
   }
